@@ -136,6 +136,7 @@ class AddSource extends React.Component {
       }
       case 'tilexyz_vector': return {
         type: 'vector',
+        scheme: 'xyz',
         tiles: source.tiles || [`${protocol}//localhost:3000/{x}/{y}/{z}.pbf`],
         minZoom: source.minzoom || 0,
         maxZoom: source.maxzoom || 14
