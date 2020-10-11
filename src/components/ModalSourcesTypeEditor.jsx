@@ -8,7 +8,6 @@ import FieldSelect from './FieldSelect'
 import FieldDynamicArray from './FieldDynamicArray'
 import FieldArray from './FieldArray'
 import FieldJson from './FieldJson'
-import FieldString from './FieldString'
 
 
 class TileJSONSourceEditor extends React.Component {
@@ -62,24 +61,6 @@ class TileURLSourceEditor extends React.Component {
   render() {
     return <div>
       {this.renderTileUrls()}
-      {/* <FieldSelect
-        label={"Source Type"}
-        fieldSpec={sourceTypeFieldSpec}
-        options={[
-          ['geojson_json', 'GeoJSON (JSON)'],
-          ['geojson_url', 'GeoJSON (URL)'],
-          ['tilejson_vector', 'Vector (TileJSON URL)'],
-          ['tilexyz_vector', 'Vector (XYZ URLs)'],
-          ['tilejson_raster', 'Raster (TileJSON URL)'],
-          ['tilexyz_raster', 'Raster (XYZ URL)'],
-          ['tilejson_raster-dem', 'Raster DEM (TileJSON URL)'],
-          ['tilexyz_raster-dem', 'Raster DEM (XYZ URLs)'],
-          ['image', 'Image'],
-          ['video', 'Video'],
-        ]}
-        onChange={mode => this.setState({mode: mode, source: this.defaultSource(mode)})}
-        value={this.state.mode}
-      /> */}
       <FieldSelect
         label={"Scheme"}
         fieldSpec={latest.source_vector.scheme}
